@@ -1,0 +1,623 @@
+#Egern Config
+#Date: 2026.05.10
+#Author: Whitisnotme
+
+ipv6: false
+http_port: 12700
+socks_port: 12701
+allow_external_connections: true
+vif_only: true
+hide_vpn_icon: false
+geoip_db_url: https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb
+asn_db_url: https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-ASN.mmdb
+proxy_latency_test_url: http://www.gstatic.com/generate_204
+direct_latency_test_url: http://connectivitycheck.platform.hicloud.com/generate_204
+udp_latency_test_url: google.com@8.8.8.8
+compat_route: false
+include_all_networks: false
+vif_excluded_routes:
+- 192.168.0.0/16
+- 172.16.0.0/12
+- 10.0.0.0/8
+dns:
+  bootstrap:
+  - 223.5.5.5
+  - 119.29.29.29
+  upstreams:
+    China:
+    - quic://dns.alidns.com
+    - https://doh.pub/dns-query
+    Global:
+    - quic://unfiltered.adguard-dns.com
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+  forward:
+  - proxy_rule_set:
+      match: https://rule.kelee.one/Loon/ChinaMax.lsr
+      value: China
+      disabled: false
+  - proxy_rule_set:
+      match: https://rule.kelee.one/Loon/Global.lsr
+      value: Global
+      disabled: false
+  - domain_wildcard:
+      match: '*'
+      value: Global
+      disabled: false
+  public_ip_lookup_url: https://ifconfig.me/ip
+policy_groups:
+- select:
+    name: Available
+    policies:
+    - External
+    flatten: true
+    filter: ^(?!.*(重置|试用|过期|Date|GB|Day|到期|维护|失效|演示|官方|免费|流量|剩余|已用|跑路|待补|补货|停用|禁售|禁用|故障|测速|应急|落地|回程|中继|Relay|Tunnel|游戏|待续|Construction|Expire|Expired|Free|Trial|Test|Demo|Maintain|Outage|Sold.?Out|Closed)).*(?!^$)
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png
+    hidden: false
+- select:
+    name: Ad-Block
+    policies:
+    - DIRECT
+    - REJECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Adblock.png
+    hidden: false
+- select:
+    name: AI
+    policies:
+    - Available
+    - TW-Select
+    - TW-Auto
+    - JP-Select
+    - JP-Auto
+    - KR-Select
+    - KR-Auto
+    - US-Select
+    - US-Auto
+    - SG-Select
+    - SG-Auto
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
+    hidden: false
+- select:
+    name: Apple
+    policies:
+    - DIRECT
+    - Available
+    - HK-Select
+    - HK-Auto
+    - TW-Select
+    - TW-Auto
+    - JP-Select
+    - JP-Auto
+    - KR-Select
+    - KR-Auto
+    - US-Select
+    - US-Auto
+    - SG-Select
+    - SG-Auto
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png
+    hidden: false
+- select:
+    name: BiliBili
+    policies:
+    - DIRECT
+    - Available
+    - HK-Select
+    - HK-Auto
+    - TW-Select
+    - TW-Auto
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Bili.png
+    hidden: false
+- select:
+    name: Disney
+    policies:
+    - Available
+    - HK-Select
+    - HK-Auto
+    - TW-Select
+    - TW-Auto
+    - JP-Select
+    - JP-Auto
+    - KR-Select
+    - KR-Auto
+    - US-Select
+    - US-Auto
+    - SG-Select
+    - SG-Auto
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/DisneyPlus.png
+    hidden: false
+- select:
+    name: Game
+    policies:
+    - DIRECT
+    - Available
+    - HK-Select
+    - HK-Auto
+    - TW-Select
+    - TW-Auto
+    - JP-Select
+    - JP-Auto
+    - KR-Select
+    - KR-Auto
+    - US-Select
+    - US-Auto
+    - SG-Select
+    - SG-Auto
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/GAME.png
+    hidden: false
+- select:
+    name: Google
+    policies:
+    - Available
+    - HK-Select
+    - HK-Auto
+    - TW-Select
+    - TW-Auto
+    - JP-Select
+    - JP-Auto
+    - KR-Select
+    - KR-Auto
+    - US-Select
+    - US-Auto
+    - SG-Select
+    - SG-Auto
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png
+    hidden: false
+- select:
+    name: Instagram
+    policies:
+    - Available
+    - HK-Select
+    - HK-Auto
+    - TW-Select
+    - TW-Auto
+    - JP-Select
+    - JP-Auto
+    - KR-Select
+    - KR-Auto
+    - US-Select
+    - US-Auto
+    - SG-Select
+    - SG-Auto
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Instagram.png
+    hidden: false
+- select:
+    name: Microsoft
+    policies:
+    - DIRECT
+    - Available
+    - HK-Select
+    - HK-Auto
+    - TW-Select
+    - TW-Auto
+    - JP-Select
+    - JP-Auto
+    - KR-Select
+    - KR-Auto
+    - US-Select
+    - US-Auto
+    - SG-Select
+    - SG-Auto
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png
+    hidden: false
+- select:
+    name: Netflix
+    policies:
+    - Available
+    - HK-Select
+    - HK-Auto
+    - TW-Select
+    - TW-Auto
+    - JP-Select
+    - JP-Auto
+    - KR-Select
+    - KR-Auto
+    - US-Select
+    - US-Auto
+    - SG-Select
+    - SG-Auto
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Netflix.png
+    hidden: false
+- select:
+    name: PayPal
+    policies:
+    - DIRECT
+    - Available
+    - HK-Select
+    - HK-Auto
+    - TW-Select
+    - TW-Auto
+    - JP-Select
+    - JP-Auto
+    - KR-Select
+    - KR-Auto
+    - US-Select
+    - US-Auto
+    - SG-Select
+    - SG-Auto
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Paypal.png
+    hidden: false
+- select:
+    name: Speedtest
+    policies:
+    - DIRECT
+    - Available
+    - HK-Select
+    - HK-Auto
+    - TW-Select
+    - TW-Auto
+    - JP-Select
+    - JP-Auto
+    - KR-Select
+    - KR-Auto
+    - US-Select
+    - US-Auto
+    - SG-Select
+    - SG-Auto
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Speedtest.png
+    hidden: false
+- select:
+    name: Spotify
+    policies:
+    - DIRECT
+    - Available
+    - HK-Select
+    - HK-Auto
+    - TW-Select
+    - TW-Auto
+    - JP-Select
+    - JP-Auto
+    - KR-Select
+    - KR-Auto
+    - US-Select
+    - US-Auto
+    - SG-Select
+    - SG-Auto
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Spotify.png
+    hidden: false
+- select:
+    name: Telegram
+    policies:
+    - Available
+    - HK-Select
+    - HK-Auto
+    - TW-Select
+    - TW-Auto
+    - JP-Select
+    - JP-Auto
+    - KR-Select
+    - KR-Auto
+    - US-Select
+    - US-Auto
+    - SG-Select
+    - SG-Auto
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png
+    hidden: false
+- select:
+    name: TikTok
+    policies:
+    - Available
+    - HK-Select
+    - HK-Auto
+    - TW-Select
+    - TW-Auto
+    - JP-Select
+    - JP-Auto
+    - KR-Select
+    - KR-Auto
+    - US-Select
+    - US-Auto
+    - SG-Select
+    - SG-Auto
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/TikTok.png
+    hidden: false
+- select:
+    name: Twitter
+    policies:
+    - Available
+    - HK-Select
+    - HK-Auto
+    - TW-Select
+    - TW-Auto
+    - JP-Select
+    - JP-Auto
+    - KR-Select
+    - KR-Auto
+    - US-Select
+    - US-Auto
+    - SG-Select
+    - SG-Auto
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Twitter.png
+    hidden: false
+- select:
+    name: YouTube
+    policies:
+    - Available
+    - HK-Select
+    - HK-Auto
+    - TW-Select
+    - TW-Auto
+    - JP-Select
+    - JP-Auto
+    - KR-Select
+    - KR-Auto
+    - US-Select
+    - US-Auto
+    - SG-Select
+    - SG-Auto
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/YouTube.png
+    hidden: false
+- select:
+    name: HK-Select
+    policies:
+    - Available
+    flatten: true
+    filter: (?i)🇭🇰|香港|港|穗|深港|京港|(\b(HK|HongKong|Hong Kong|HKBN|HGC|HKIX)\b)
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+    hidden: false
+- select:
+    name: TW-Select
+    policies:
+    - Available
+    flatten: true
+    filter: (?i)🇹🇼|台湾|臺湾|台|台中|台北|高雄|新竹|(\b(TW|Taiwan|TaiWan|TPE|TWBN|TW-)\b)
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+    hidden: false
+- select:
+    name: JP-Select
+    policies:
+    - Available
+    flatten: true
+    filter: (?i)🇯🇵|日本|东京|大阪|埼玉|九州|北海道|软银|东京都|大阪府|大阪市|大阪城|东京塔|东京湾|(\b(JP|Japan|Tokyo|Softbank|IIJ|KDDI|NTT|TYO|KIX|HND|NRT)\b)
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
+    hidden: false
+- select:
+    name: KR-Select
+    policies:
+    - Available
+    flatten: true
+    filter: (?i)🇰🇷|韩国|韓國|首尔|首爾|韩|仁川|釜山|济州|(\b(KR|Korea|South.?Korea|SEL|ICN|PUS)\b)
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
+    hidden: false
+- select:
+    name: US-Select
+    policies:
+    - Available
+    flatten: true
+    filter: (?i)🇺🇸|美国|美|洛杉矶|圣何塞|达拉斯|芝加州|纽约|西雅图|弗吉尼亚|亚特兰大|芝加哥|凤凰城|波特兰|(\b(US|United States|USA|LAX|SJC|SEA|IAD|DFW|ATL|PHX)\b)
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+    hidden: false
+- select:
+    name: SG-Select
+    policies:
+    - Available
+    flatten: true
+    filter: (?i)🇸🇬|新加坡|新加|狮城|(\b(SG|Singapore|Sing|SGP)\b)
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+    hidden: false
+- auto_test:
+    name: HK-Auto
+    policies:
+    - Available
+    flatten: true
+    filter: (?i)🇭🇰|香港|港|穗|深港|京港|(\b(HK|HongKong|Hong Kong|HKBN|HGC|HKIX)\b)
+    interval: 20
+    tolerance: 50
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+    hidden: true
+- auto_test:
+    name: TW-Auto
+    policies:
+    - Available
+    flatten: true
+    filter: (?i)🇹🇼|台湾|臺湾|台|台中|台北|高雄|新竹|(\b(TW|Taiwan|TaiWan|TPE|TWBN|TW-)\b)
+    interval: 20
+    tolerance: 50
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+    hidden: true
+- auto_test:
+    name: JP-Auto
+    policies:
+    - Available
+    flatten: true
+    filter: (?i)🇯🇵|日本|东京|大阪|埼玉|九州|北海道|软银|东京都|大阪府|大阪市|大阪城|东京塔|东京湾|(\b(JP|Japan|Tokyo|Softbank|IIJ|KDDI|NTT|TYO|KIX|HND|NRT)\b)
+    interval: 20
+    tolerance: 50
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
+    hidden: true
+- auto_test:
+    name: KR-Auto
+    policies:
+    - Available
+    flatten: true
+    filter: (?i)🇰🇷|韩国|韓國|首尔|首爾|韩|仁川|釜山|济州|(\b(KR|Korea|South.?Korea|SEL|ICN|PUS)\b)
+    interval: 20
+    tolerance: 50
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
+    hidden: true
+- auto_test:
+    name: US-Auto
+    policies:
+    - Available
+    flatten: true
+    filter: (?i)🇺🇸|美国|美|洛杉矶|圣何塞|达拉斯|芝加州|纽约|西雅图|弗吉尼亚|亚特兰大|芝加哥|凤凰城|波特兰|(\b(US|United States|USA|LAX|SJC|SEA|IAD|DFW|ATL|PHX)\b)
+    interval: 20
+    tolerance: 50
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+    hidden: true
+- auto_test:
+    name: SG-Auto
+    policies:
+    - Available
+    flatten: true
+    filter: (?i)🇸🇬|新加坡|新加|狮城|(\b(SG|Singapore|Sing|SGP)\b)
+    interval: 20
+    tolerance: 50
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+    hidden: true
+- external:
+    name: External
+    type: select
+    hidden: true
+rules:
+- rule_set:
+    name: Lan
+    match: https://rule.kelee.one/Loon/Lan.lsr
+    policy: DIRECT
+    disabled: false
+- rule_set:
+    name: AWAvenue-Ads-Rule
+    match: https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list
+    policy: Ad-Block
+    update_interval: 10800
+    disabled: false
+- rule_set:
+    name: Cats-Team/AdRules
+    match: https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules.list
+    policy: Ad-Block
+    update_interval: 10800
+    disabled: false
+- rule_set:
+    name: Ad-Rules
+    match: https://adrules.top/adrules.list
+    policy: Ad-Block
+    update_interval: 10800
+    disabled: false
+- rule_set:
+    name: AI
+    match: https://kelee.one/Tool/Loon/Lsr/AI.lsr
+    policy: AI
+    disabled: false
+- rule_set:
+    name: Apple
+    match: https://rule.kelee.one/Loon/Apple.lsr
+    policy: Apple
+    disabled: false
+- rule_set:
+    name: BiliBili
+    match: https://rule.kelee.one/Loon/BiliBili.lsr
+    policy: BiliBili
+    disabled: false
+- rule_set:
+    name: Disney
+    match: https://rule.kelee.one/Loon/Disney.lsr
+    policy: Disney
+    disabled: false
+- rule_set:
+    name: Game
+    match: https://rule.kelee.one/Loon/Game.lsr
+    policy: Game
+    disabled: false
+- rule_set:
+    name: Google
+    match: https://rule.kelee.one/Loon/Google.lsr
+    policy: Google
+    disabled: false
+- rule_set:
+    name: Instagram
+    match: https://rule.kelee.one/Loon/Instagram.lsr
+    policy: Instagram
+    disabled: false
+- rule_set:
+    name: Microsoft
+    match: https://rule.kelee.one/Loon/Microsoft.lsr
+    policy: Microsoft
+    disabled: false
+- rule_set:
+    name: Netflix
+    match: https://rule.kelee.one/Loon/Netflix.lsr
+    policy: Netflix
+    disabled: false
+- rule_set:
+    name: PayPal
+    match: https://rule.kelee.one/Loon/PayPal.lsr
+    policy: PayPal
+    disabled: false
+- rule_set:
+    name: Speedtest
+    match: https://rule.kelee.one/Loon/Speedtest.lsr
+    policy: Speedtest
+    disabled: false
+- rule_set:
+    name: Spotify
+    match: https://rule.kelee.one/Loon/Spotify.lsr
+    policy: Spotify
+    disabled: false
+- rule_set:
+    name: Telegram
+    match: https://rule.kelee.one/Loon/Telegram.lsr
+    policy: Telegram
+    disabled: false
+- rule_set:
+    name: TikTok
+    match: https://rule.kelee.one/Loon/TikTok.lsr
+    policy: TikTok
+    disabled: false
+- rule_set:
+    name: Twitter
+    match: https://rule.kelee.one/Loon/Twitter.lsr
+    policy: Twitter
+    disabled: false
+- rule_set:
+    name: YouTube
+    match: https://rule.kelee.one/Loon/YouTube.lsr
+    policy: YouTube
+    disabled: false
+- rule_set:
+    name: ChinaTelecom
+    match: https://rule.kelee.one/Loon/ChinaTelecom.lsr
+    policy: DIRECT
+    disabled: false
+- rule_set:
+    name: ChinaUnicom
+    match: https://rule.kelee.one/Loon/ChinaUnicom.lsr
+    policy: DIRECT
+    disabled: false
+- rule_set:
+    name: ChinaMobile
+    match: https://rule.kelee.one/Loon/ChinaMobile.lsr
+    policy: DIRECT
+    disabled: false
+- rule_set:
+    name: Global
+    match: https://rule.kelee.one/Loon/Global.lsr
+    policy: Available
+    disabled: false
+- rule_set:
+    name: ChinaMax
+    match: https://rule.kelee.one/Loon/ChinaMax.lsr
+    policy: DIRECT
+    disabled: false
+- rule_set:
+    name: ChinaASN
+    match: https://rule.kelee.one/Loon/ChinaASN.lsr
+    policy: DIRECT
+    disabled: false
+- geoip:
+    name: GeoIP-CN
+    match: CN
+    policy: DIRECT
+    no_resolve: true
+    disabled: false
+- default:
+    name: FINAL
+    policy: Available
+mitm:
+  ca_p12: egern.p12
+  ca_passphrase: egern
