@@ -1,5 +1,5 @@
 #Egern Config
-#Date: 2026.05.10
+#Date: 2026.05.11
 #Author: Whitisnotme
 #GitHub Repo: https://github.com/Whitisnotme/Egern
 
@@ -69,14 +69,18 @@ policy_groups:
     - Available
     - TW-Select
     - TW-Auto
+    - SG-Select
+    - SG-Auto
     - JP-Select
     - JP-Auto
     - KR-Select
     - KR-Auto
     - US-Select
     - US-Auto
-    - SG-Select
-    - SG-Auto
+    - DE-Select
+    - DE-Auto
+    - UK-Select
+    - UK-Auto
     flatten: false
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
     hidden: false
@@ -89,14 +93,18 @@ policy_groups:
     - HK-Auto
     - TW-Select
     - TW-Auto
+    - SG-Select
+    - SG-Auto
     - JP-Select
     - JP-Auto
     - KR-Select
     - KR-Auto
     - US-Select
     - US-Auto
-    - SG-Select
-    - SG-Auto
+    - DE-Select
+    - DE-Auto
+    - UK-Select
+    - UK-Auto
     flatten: false
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png
     hidden: false
@@ -120,14 +128,18 @@ policy_groups:
     - HK-Auto
     - TW-Select
     - TW-Auto
+    - SG-Select
+    - SG-Auto
     - JP-Select
     - JP-Auto
     - KR-Select
     - KR-Auto
     - US-Select
     - US-Auto
-    - SG-Select
-    - SG-Auto
+    - DE-Select
+    - DE-Auto
+    - UK-Select
+    - UK-Auto
     flatten: false
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/DisneyPlus.png
     hidden: false
@@ -140,14 +152,18 @@ policy_groups:
     - HK-Auto
     - TW-Select
     - TW-Auto
+    - SG-Select
+    - SG-Auto
     - JP-Select
     - JP-Auto
     - KR-Select
     - KR-Auto
     - US-Select
     - US-Auto
-    - SG-Select
-    - SG-Auto
+    - DE-Select
+    - DE-Auto
+    - UK-Select
+    - UK-Auto
     flatten: false
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/GAME.png
     hidden: false
@@ -159,14 +175,18 @@ policy_groups:
     - HK-Auto
     - TW-Select
     - TW-Auto
+    - SG-Select
+    - SG-Auto
     - JP-Select
     - JP-Auto
     - KR-Select
     - KR-Auto
     - US-Select
     - US-Auto
-    - SG-Select
-    - SG-Auto
+    - DE-Select
+    - DE-Auto
+    - UK-Select
+    - UK-Auto
     flatten: false
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png
     hidden: false
@@ -178,14 +198,18 @@ policy_groups:
     - HK-Auto
     - TW-Select
     - TW-Auto
+    - SG-Select
+    - SG-Auto
     - JP-Select
     - JP-Auto
     - KR-Select
     - KR-Auto
     - US-Select
     - US-Auto
-    - SG-Select
-    - SG-Auto
+    - DE-Select
+    - DE-Auto
+    - UK-Select
+    - UK-Auto
     flatten: false
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Instagram.png
     hidden: false
@@ -198,14 +222,18 @@ policy_groups:
     - HK-Auto
     - TW-Select
     - TW-Auto
+    - SG-Select
+    - SG-Auto
     - JP-Select
     - JP-Auto
     - KR-Select
     - KR-Auto
     - US-Select
     - US-Auto
-    - SG-Select
-    - SG-Auto
+    - DE-Select
+    - DE-Auto
+    - UK-Select
+    - UK-Auto
     flatten: false
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png
     hidden: false
@@ -217,14 +245,18 @@ policy_groups:
     - HK-Auto
     - TW-Select
     - TW-Auto
+    - SG-Select
+    - SG-Auto
     - JP-Select
     - JP-Auto
     - KR-Select
     - KR-Auto
     - US-Select
     - US-Auto
-    - SG-Select
-    - SG-Auto
+    - DE-Select
+    - DE-Auto
+    - UK-Select
+    - UK-Auto
     flatten: false
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Netflix.png
     hidden: false
@@ -237,14 +269,18 @@ policy_groups:
     - HK-Auto
     - TW-Select
     - TW-Auto
+    - SG-Select
+    - SG-Auto
     - JP-Select
     - JP-Auto
     - KR-Select
     - KR-Auto
     - US-Select
     - US-Auto
-    - SG-Select
-    - SG-Auto
+    - DE-Select
+    - DE-Auto
+    - UK-Select
+    - UK-Auto
     flatten: false
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Paypal.png
     hidden: false
@@ -257,14 +293,18 @@ policy_groups:
     - HK-Auto
     - TW-Select
     - TW-Auto
+    - SG-Select
+    - SG-Auto
     - JP-Select
     - JP-Auto
     - KR-Select
     - KR-Auto
     - US-Select
     - US-Auto
-    - SG-Select
-    - SG-Auto
+    - DE-Select
+    - DE-Auto
+    - UK-Select
+    - UK-Auto
     flatten: false
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Speedtest.png
     hidden: false
@@ -277,14 +317,18 @@ policy_groups:
     - HK-Auto
     - TW-Select
     - TW-Auto
+    - SG-Select
+    - SG-Auto
     - JP-Select
     - JP-Auto
     - KR-Select
     - KR-Auto
     - US-Select
     - US-Auto
-    - SG-Select
-    - SG-Auto
+    - DE-Select
+    - DE-Auto
+    - UK-Select
+    - UK-Auto
     flatten: false
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Spotify.png
     hidden: false
@@ -296,14 +340,18 @@ policy_groups:
     - HK-Auto
     - TW-Select
     - TW-Auto
+    - SG-Select
+    - SG-Auto
     - JP-Select
     - JP-Auto
     - KR-Select
     - KR-Auto
     - US-Select
     - US-Auto
-    - SG-Select
-    - SG-Auto
+    - DE-Select
+    - DE-Auto
+    - UK-Select
+    - UK-Auto
     flatten: false
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png
     hidden: false
@@ -315,14 +363,18 @@ policy_groups:
     - HK-Auto
     - TW-Select
     - TW-Auto
+    - SG-Select
+    - SG-Auto
     - JP-Select
     - JP-Auto
     - KR-Select
     - KR-Auto
     - US-Select
     - US-Auto
-    - SG-Select
-    - SG-Auto
+    - DE-Select
+    - DE-Auto
+    - UK-Select
+    - UK-Auto
     flatten: false
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/TikTok.png
     hidden: false
@@ -334,14 +386,18 @@ policy_groups:
     - HK-Auto
     - TW-Select
     - TW-Auto
+    - SG-Select
+    - SG-Auto
     - JP-Select
     - JP-Auto
     - KR-Select
     - KR-Auto
     - US-Select
     - US-Auto
-    - SG-Select
-    - SG-Auto
+    - DE-Select
+    - DE-Auto
+    - UK-Select
+    - UK-Auto
     flatten: false
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Twitter.png
     hidden: false
@@ -353,14 +409,18 @@ policy_groups:
     - HK-Auto
     - TW-Select
     - TW-Auto
+    - SG-Select
+    - SG-Auto
     - JP-Select
     - JP-Auto
     - KR-Select
     - KR-Auto
     - US-Select
     - US-Auto
-    - SG-Select
-    - SG-Auto
+    - DE-Select
+    - DE-Auto
+    - UK-Select
+    - UK-Auto
     flatten: false
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/YouTube.png
     hidden: false
@@ -379,6 +439,14 @@ policy_groups:
     flatten: true
     filter: (?i)🇹🇼|台湾|臺湾|台|台中|台北|高雄|新竹|(\b(TW|Taiwan|TaiWan|TPE|TWBN|TW-)\b)
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+    hidden: false
+- select:
+    name: SG-Select
+    policies:
+    - Available
+    flatten: true
+    filter: (?i)🇸🇬|新加坡|新加|狮城|(\b(SG|Singapore|Sing|SGP)\b)
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
     hidden: false
 - select:
     name: JP-Select
@@ -405,12 +473,20 @@ policy_groups:
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
     hidden: false
 - select:
-    name: SG-Select
+    name: DE-Select
     policies:
     - Available
     flatten: true
-    filter: (?i)🇸🇬|新加坡|新加|狮城|(\b(SG|Singapore|Sing|SGP)\b)
-    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+    filter: (?i)🇩🇪|德国|德|法兰克福|柏林|慕尼黑|汉堡|杜塞尔多夫|(\b(DE|GER|Germany|FRA|BER|MUC|HAM|DUS)\b)
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/DE.png
+    hidden: false
+- select:
+    name: UK-Select
+    policies:
+    - Available
+    flatten: true
+    filter: (?i)🇬🇧|英国|英|伦敦|曼彻斯特|格拉斯哥|(\b(UK|GB|GBR|United Kingdom|LON|LHR|LGW|MAN)\b)
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/UK.png
     hidden: false
 - auto_test:
     name: HK-Auto
@@ -431,6 +507,16 @@ policy_groups:
     interval: 20
     tolerance: 50
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+    hidden: true
+- auto_test:
+    name: SG-Auto
+    policies:
+    - Available
+    flatten: true
+    filter: (?i)🇸🇬|新加坡|新加|狮城|(\b(SG|Singapore|Sing|SGP)\b)
+    interval: 20
+    tolerance: 50
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
     hidden: true
 - auto_test:
     name: JP-Auto
@@ -463,14 +549,24 @@ policy_groups:
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
     hidden: true
 - auto_test:
-    name: SG-Auto
+    name: DE-Auto
     policies:
     - Available
     flatten: true
-    filter: (?i)🇸🇬|新加坡|新加|狮城|(\b(SG|Singapore|Sing|SGP)\b)
+    filter: (?i)🇩🇪|德国|德|法兰克福|柏林|慕尼黑|汉堡|杜塞尔多夫|(\b(DE|GER|Germany|FRA|BER|MUC|HAM|DUS)\b)
     interval: 20
     tolerance: 50
-    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/DE.png
+    hidden: true
+- auto_test:
+    name: UK-Auto
+    policies:
+    - Available
+    flatten: true
+    filter: (?i)🇬🇧|英国|英|伦敦|曼彻斯特|格拉斯哥|(\b(UK|GB|GBR|United Kingdom|LON|LHR|LGW|MAN)\b)
+    interval: 20
+    tolerance: 50
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/UK.png
     hidden: true
 - external:
     name: External
